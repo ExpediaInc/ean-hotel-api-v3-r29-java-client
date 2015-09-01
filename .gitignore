@@ -1,12 +1,35 @@
+.log
+
+# Gradle
+.gradle/
+classes/
+build/
+manifest.json
 *.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+out/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# Eclipse
+.project
+.classpath
+.settings
+bin/
+test-output/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Mac
+.DS_Store
+
+# Clover
+.clover/
+clover-license.txt
+clover.license
+
+# Vagrant
+.vagrant/
+
