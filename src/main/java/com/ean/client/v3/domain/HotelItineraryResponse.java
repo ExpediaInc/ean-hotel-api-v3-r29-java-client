@@ -2,24 +2,33 @@ package com.ean.client.v3.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import com.ean.client.v3.domain.EanWsError;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 /**
  * Contains the hotel itinerary response for the service request.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonRootName(value = "HotelItineraryResponse")
 public class HotelItineraryResponse extends BaseResponse implements Serializable {
+
+    private static final long serialVersionUID = -3751923281323499088L;
 
     @JsonProperty("@size")
     private int size;
 
     @JsonProperty("Itinerary")
     private List<Itinerary> itineraries = new ArrayList<Itinerary>();
+
+    /**
+     * Constructor.
+     */
+    public HotelItineraryResponse() {
+        super();
+    }
 
     /**
      * Returns the size for the HotelItineraryResponse

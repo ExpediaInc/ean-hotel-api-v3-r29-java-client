@@ -12,6 +12,8 @@ import java.math.BigDecimal;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ChargeableRateInfo implements Serializable {
 
+    private static final long serialVersionUID = -3557042242820190093L;
+
     @JsonProperty("NightlyRatesPerRoom")
     private NightlyRatesPerRoom nightlyRatesPerRoom;
 

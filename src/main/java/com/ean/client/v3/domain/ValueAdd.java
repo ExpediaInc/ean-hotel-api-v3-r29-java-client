@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ValueAdd implements Serializable {
 
+    private static final long serialVersionUID = 8725882684138769670L;
+
     @JsonProperty("description")
     private String description;
 

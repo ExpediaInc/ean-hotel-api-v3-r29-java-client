@@ -2,7 +2,6 @@ package com.ean.client.v3.domain;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
@@ -13,12 +12,8 @@ import com.ean.client.v3.domain.RateInfos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 
 /**
  * Contains details of the hotel room confirmation.
@@ -26,7 +21,7 @@ import org.apache.commons.logging.LogFactory;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class HotelConfirmation implements Serializable {
 
-    private final static Log LOG = LogFactory.getLog(HotelConfirmation.class);
+    private static final long serialVersionUID = 7923046937776562778L;
 
     @JsonProperty("RateInfos")
     private RateInfos rateInfos = new RateInfos();

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Customer implements Serializable {
 
+    private static final long serialVersionUID = -7789366958165148013L;
+
     @JsonProperty("email")
     private String email;
 

@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BaseResponse implements Serializable {
 
+    private static final long serialVersionUID = 5267505926715996769L;
+
     @JsonProperty("EanWsError")
     protected EanWsError eanWsError;
 

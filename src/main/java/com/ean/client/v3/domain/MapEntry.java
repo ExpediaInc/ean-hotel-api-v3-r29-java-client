@@ -8,10 +8,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MapEntry implements Serializable {
 
+    private static final long serialVersionUID = -5372035804535904186L;
+
     @JsonProperty("key")
     protected String key;
 
-    @JsonProperty("Customer")
+    @JsonProperty("value")
     protected String value;
 
     /**

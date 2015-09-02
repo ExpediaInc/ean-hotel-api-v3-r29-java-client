@@ -13,6 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ValueAdds implements Serializable {
 
+    private static final long serialVersionUID = -408467012550249566L;
+
     @JsonProperty("@size")
     private int size;
 

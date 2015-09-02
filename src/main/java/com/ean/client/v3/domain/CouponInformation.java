@@ -10,6 +10,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CouponInformation implements Serializable {
 
+    private static final long serialVersionUID = -9053705136198776044L;
+
     private String couponCode;
     private String couponDiscount;
     private String couponEmail;

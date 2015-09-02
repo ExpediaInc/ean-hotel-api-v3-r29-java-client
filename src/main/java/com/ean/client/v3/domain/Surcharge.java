@@ -12,6 +12,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Surcharge implements Serializable {
 
+    private static final long serialVersionUID = 144740692331106795L;
+
     @JsonProperty("@amount")
     private BigDecimal amount = BigDecimal.ZERO;
 

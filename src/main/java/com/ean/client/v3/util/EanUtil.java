@@ -7,11 +7,12 @@ import java.security.NoSuchAlgorithmException;
 import com.ean.client.v3.domain.BaseRequest;
 
 public class EanUtil {
-    public final static int MINOR_REV = 30;
-	
-    public static String generateSigParam(String apiKey, String secretKey) {
-        String sig = null;
 
+    public static String generateSigParam(String apiKey, String secretKey) {
+        if (secretKey == null) {
+            return null;
+        }
+        String sig = null;
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             long timeInSeconds = (System.currentTimeMillis() / 1000);
@@ -25,14 +26,14 @@ public class EanUtil {
         return sig;
     }
 
-    public static void setStandardRequestParams(BaseRequest baseRequest, int cid, boolean useSigAuthentication,
+    public static void setStandardRequestParams(BaseRequest baseRequest, int cid, int minorRev,
             String apiKey, String secretKey) {
+        baseRequest.setCid(cid);
         baseRequest.setApiKey(apiKey);
         baseRequest.setSig(EanUtil.generateSigParam(apiKey, secretKey));
-        baseRequest.setMinorRev(MINOR_REV);
+        baseRequest.setMinorRev(minorRev);
         baseRequest.setTest(false);
         baseRequest.setDebug(false);
-        baseRequest.setCid(cid);
     }
 
 }

@@ -1,13 +1,13 @@
 package com.ean.client.v3.service;
 
 import java.text.SimpleDateFormat;
+import javax.ws.rs.ext.ContextResolver;
+import javax.ws.rs.ext.Provider;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import javax.ws.rs.ext.ContextResolver;
-import javax.ws.rs.ext.Provider;
+import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
 
 /**
  * Implementation of the ObjectMapperFactory.
@@ -32,8 +32,10 @@ public class ObjectMapperProvider implements ContextResolver<ObjectMapper> {
         final ObjectMapper om = new ObjectMapper();
         om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         om.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+        om.configure(DeserializationFeature.UNWRAP_ROOT_VALUE, true);
         om.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         om.setDateFormat(new SimpleDateFormat(DATE_FORMAT));
+        om.setAnnotationIntrospector(new JacksonAnnotationIntrospector());
         return om;
     }
 }

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Deposit implements Serializable {
 
+    private static final long serialVersionUID = -2850220213051926851L;
+
     @JsonProperty("@amount")
     private BigDecimal amount = BigDecimal.ZERO;
 

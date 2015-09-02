@@ -12,6 +12,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class NightlyRatesPerRoom implements Serializable {
 
+    private static final long serialVersionUID = 233012885368856033L;
+
     @JsonProperty("@size")
     private int size;
 

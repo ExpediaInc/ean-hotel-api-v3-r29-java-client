@@ -29,17 +29,20 @@ dependencies {
     compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
 
     // Jersey 1.x + Jackson
-    compile 'asm:asm:3.3.1'
-    compile 'com.sun.jersey:jersey-client:1.19'
-    compile 'com.sun.jersey:jersey-bundle:1.19'
+    //compile 'asm:asm:3.3.1'
+    //compile 'com.sun.jersey:jersey-client:1.19'
+    //compile 'com.sun.jersey:jersey-bundle:1.19'
 
     // Jersey 2.x
-    //compile 'org.glassfish.jersey.core:jersey-client:2.21'
+    compile 'org.glassfish.jersey.core:jersey-client:2.21'
+    compile 'org.glassfish.jersey.connectors:jersey-apache-connector:2.21'
+    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.21'
 
     // latest is 2.6.1, booking service uses 2.6.1
     compile 'com.fasterxml.jackson.core:jackson-core:2.6.1'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.1'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.1'
+    compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.6.1'
     compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.6.1'
     //compile 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.6.1'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.6.1'

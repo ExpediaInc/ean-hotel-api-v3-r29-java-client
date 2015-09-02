@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EanWsError implements Serializable {
 
+    private static final long serialVersionUID = -5677596327574961814L;
+
     @JsonProperty("itineraryId")
     private long itineraryId;
 

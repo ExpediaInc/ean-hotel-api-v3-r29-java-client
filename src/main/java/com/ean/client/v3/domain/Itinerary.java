@@ -14,6 +14,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Itinerary implements Serializable {
 
+    private static final long serialVersionUID = -140593219864810226L;
+
     @JsonProperty("Customer")
     private Customer customer;
 

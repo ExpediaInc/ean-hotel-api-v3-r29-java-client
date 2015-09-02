@@ -12,6 +12,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RateInfo implements Serializable {
 
+    private static final long serialVersionUID = 5178183574674678741L;
+
     @JsonProperty("ChargeableRateInfo")
     private ChargeableRateInfo chargeableRateInfo;
 

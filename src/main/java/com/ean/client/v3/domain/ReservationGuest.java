@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ReservationGuest implements Serializable {
 
+    private static final long serialVersionUID = -6460658769750967758L;
+
     @JsonProperty("firstName")
     private String firstName;
 

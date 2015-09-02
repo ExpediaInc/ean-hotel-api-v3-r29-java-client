@@ -12,6 +12,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class NightlyRate implements Serializable {
 
+    private static final long serialVersionUID = -5641412115882037672L;
+
     @JsonProperty("@promo")
     private boolean promo;
 

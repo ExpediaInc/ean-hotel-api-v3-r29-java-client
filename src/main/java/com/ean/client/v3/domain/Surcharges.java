@@ -12,6 +12,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Surcharges implements Serializable {
 
+    private static final long serialVersionUID = -7338271867760339388L;
+
     @JsonProperty("@size")
     private int size;
 
