@@ -116,5 +116,15 @@ public class Itinerary implements Serializable {
         return itineraryId;
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return String.format(
+            "Itinerary [itineraryId=%s, affiliateId=%s, itineraryStartDate=%s, itineraryEndDate=%s]",
+            itineraryId, affiliateId, itineraryStartDate, itineraryEndDate);
+    }
+
 }
 
