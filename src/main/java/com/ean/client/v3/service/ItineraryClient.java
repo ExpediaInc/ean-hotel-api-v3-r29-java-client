@@ -28,12 +28,10 @@ public class ItineraryClient {
     private static final Log LOG = LogFactory.getLog(ItineraryClient.class);
     private static final ItineraryClient INSTANCE = new ItineraryClient();
     private static final String V3_ITINERARY_URL
-        = "http://%s:%s/ean-services/rs/hotel/v3/itin?cid=%s&minorRev=%s&apiKey=%s&sig=%s&itineraryId=%s&email=%s&apiExperience=%s";
+        = "https://%s:%s/ean-services/rs/hotel/v3/itin?cid=%s&minorRev=%s&apiKey=%s&sig=%s&itineraryId=%s&email=%s&apiExperience=%s";
     private static final String V3_MINOR_REV = "30";
-    //private static final String V3_ITINERARY_HOSTNAME = "book.api.ean.com";
-    //private static final String V3_ITINERARY_PORT = "80";
-    private static final String V3_ITINERARY_HOSTNAME = "pheltsvccore001.karmalab.net";
-    private static final String V3_ITINERARY_PORT = "7400";
+    private static final String V3_ITINERARY_HOSTNAME = "book.api.ean.com";
+    private static final String V3_ITINERARY_PORT = "443";
     private static final String CID = "55505";
     private static final String API_KEY = "cbrzfta369qwyrm9t5b8y8kf";
     private static final String SECRET_KEY = "cj9p2mujjlsrs";
@@ -95,7 +93,6 @@ public class ItineraryClient {
         Invocation.Builder invocationBuilder =
             webTarget.request(MediaType.APPLICATION_JSON_TYPE);
         invocationBuilder.header(HEADER_TRANSACTION_ID, request.getTransactionId());
-        invocationBuilder.header("True-Client-IP", "172.30.143.207");
 
         return invocationBuilder.get(); 
     }
