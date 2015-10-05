@@ -16,7 +16,6 @@ public class EanUtil {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             long timeInSeconds = (System.currentTimeMillis() / 1000);
-            System.out.println("timeInSec=" + timeInSeconds);
             String input = apiKey + secretKey + timeInSeconds;
             md.update(input.getBytes());
             sig = String.format("%032x", new BigInteger(1, md.digest()));
